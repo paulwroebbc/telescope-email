@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<title>Email Template</title>
+			
+		<style>
+		/* ------------------------------------- 
+				GLOBAL 
+		------------------------------------- */
+		* {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			margin:0;
+			padding:0;
+		}
+
+		body {
+			-webkit-font-smoothing:antialiased; 
+			-webkit-text-size-adjust:none; 
+			width: 100% !important; 
+			height: 100%;
+			background-color:#f1f1f1;
+			padding:0;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: -0.3px;
+			text-align: left;
+			color: #404040;
+		}
+
+		img { 
+			max-width: 100%; 
+		}
+
+		a {
+			text-decoration:none;
+		}
+
+		.collapse {
+			margin:0 !important;
+			padding:0;
+		}
+
+		/* ------------------------------------- 
+				Buttons 
+		------------------------------------- */
+		.btn {
+			text-decoration: none;
+			padding: 14px;
+			font-size: 14px;
+			font-weight: bold;
+			letter-spacing: -0.2px;
+			text-align: left;
+			color: #ffffff;
+			cursor: pointer;
+			display: inline-block;
+			background-color: #1f1c1f;
+			margin:18px 0 18px 0
+		}
+
+		/* ------------------------------------- 
+				TOP TIP 
+		------------------------------------- */
+		.top-tip {
+			background-color: #f1f0f2;
+		}
+
+		.top-tip p {
+			font-family: Helvetica;
+			font-size: 14px;
+			line-height: 1.29;
+			letter-spacing: -0.2px;
+			text-align: left;
+			color: #404040;
+		}
+
+		/* ------------------------------------- 
+				HEADER 
+		------------------------------------- */
+		table.head-wrap {
+			width: 100%;
+		}
+
+		.header.container table td.logo {
+			padding: 15px;
+		}
+
+		.header.container table td.label {
+			padding: 15px;
+			padding-left:0px;
+		}
+
+		/* ------------------------------------- 
+				BODY 
+		------------------------------------- */
+		table.body-wrap {
+			width: 100%;
+		}
+
+		/* ------------------------------------- 
+				FOOTER 
+		------------------------------------- */
+		.footer {
+			background-color:#000;
+		}
+
+		.container > .footer {
+			border:0 0 1px 0 solid #4a454c;
+		}
+
+		.footer a {
+			color:#fff;
+		}
+
+		.footer h4,
+		.footer h6 {
+			color:#fff;	
+		}
+
+		.footer p {
+			padding:10px 0 10px 0;
+			font-size: 12px;
+			line-height: 1.5;
+			letter-spacing: -0.2px;
+			text-align: center;
+			color: #ffffff;
+		}
+
+		/* ------------------------------------- 
+				TYPOGRAPHY 
+		------------------------------------- */
+
+		h1 {
+			color:#404040;
+			line-height:36px;
+			overflow:hidden;
+			font-family: Helvetica;
+			font-size: 32px !important;
+			padding:0 0 0 10px;
+			border-left:2px solid #ccc;
+			margin:0 0 0 48px;
+			font-weight: bold;
+			letter-spacing: -0.6px;
+			text-align: left;
+		}
+
+		h2 {
+			font-size: 32px;
+			font-weight: bold;
+			line-height: 36px;
+			letter-spacing: -0.6px;
+			color: #bb1919;
+			padding:18px 0 18px 0;
+		}
+
+		h3 {
+			font-size: 24px;
+			line-height: 28px;
+			letter-spacing: -0.4px;
+			color: #404040;
+			padding:18px 0 18px 0;
+		}
+
+		h4 {
+			padding:12px 0 12px 0;
+			font-family: Helvetica;
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 28px;
+			letter-spacing: -0.4px;
+			color: #404040;
+		}
+
+		h5 {
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 22px;
+			letter-spacing: -0.3px;
+			text-align: center;
+			color: #ffffff;
+			padding:10px 0 10px 0;
+		}
+
+		h6 {
+			padding:10px 0 0 0;
+			font-weight:bold;
+			font-size: 12px;
+			line-height: 18px;
+			letter-spacing: -0.2px;
+			text-align: center;
+			color: #ffffff;
+		}
+
+		/* ------------------------------------- 
+				LOGO 
+		------------------------------------- */
+		.logo {
+			background-image: url("../images/logo.jpg");
+			background-repeat: no-repeat;
+			background-position: top-left;
+			background-size: 36px 36px;
+		}
+
+		/* --------------------------------------------------- 
+				RESPONSIVENESS
+				Nuke it from orbit. It's the only way to be sure. 
+		------------------------------------------------------ */
+
+		/*
+			Set a max-width,
+			and make it display as block
+			so it will automatically stretch
+			to that width, but will also
+			shrink down on a phone or something
+		*/
+		.container {
+			background-color:#fff;
+			display:block!important;
+			max-width:600px!important;
+			margin:0 auto!important; /* makes it centered */
+			clear:both!important;
+		}
+
+		/*
+			This should also be a block element,
+			so that it will fill 100% of the .container
+		*/
+		.content {
+			padding:15px;
+			max-width:600px;
+			margin:0 auto;
+			display:block;
+			border:1px solid #ccc;
+			border-bottom:none;
+		}
+
+		/*
+			Let's make sure tables in the content
+			area are 100% wide
+		*/
+		.content table {
+			width: 100%;
+		}
+
+		/*
+			Odds and ends
+		*/
+		.column {
+			width: 300px;
+			float: left;
+		}
+
+		.column tr td {
+			padding: 15px;
+		}
+
+		.column-wrap { 
+			padding: 0 !important; 
+			margin: 0 auto; 
+			max-width: 600px !important;
+		}
+
+		.column table {
+			width: 100%;
+		}
+
+		.social .column {
+			width: 280px;
+			min-width: 279px;
+			float: left;
+		}
+
+		/*
+			Be sure to place a .clear element
+			after each set of columns, just to
+			be safe
+		*/
+		.clear {
+			display: block;
+			clear: both;
+		}
+
+		/* ------------------------------------------- 
+				PHONE
+				For clients that support media queries.
+				Nothing fancy. 
+		-------------------------------------------- */
+		@media only screen and (max-width: 600px) {
+			
+			a[class="btn"] {
+				display: block !important;
+				margin-bottom: 10px !important;
+				background-image: none !important;
+				margin-right: 0 !important;
+			}
+
+			div[class="column"] {
+				width: auto !important;
+				float: none !important;
+			}
+			
+			table.social div[class="column"] {
+				width: auto !important;
+			}
+
+		}
+		</style>
+
+	</head>
+ 
+	<body>
+
+		<table class="body-wrap">
+			<tr>
+				<td></td>
+				<td class="container">
+					
+					<!-- Logo -->
+					<div class="content">
+						<table>
+							<tr>
+								<td class="logo">
+									<h1>Telescope Newsletter</h1>	
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<!-- Image -->
+					<div class="content">
+						<table>
+							<tr>
+								<td>
+
+									<h2>Email Title</h2>
+
+									<img src="http://placehold.it/564x232" />
+
+									<h3>Section Heading</h3>				
+				
+									<p>Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Link Link Link, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text</p>
+				
+									<a href="#" class="btn">Link text goes here...</a>
+	
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<!-- Top Tip -->
+					<div class="content top-tip">
+						<table>
+							<tr>
+								<td>
+									<h4>Top Tip</h4>
+									<p>Latest top tips from users</p>	
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="content footer">
+						<table>
+							<tr>
+								<td>
+									<h5>Having problems with Telescope, or could it do more to help you?</h5>
+									<p>Share your thoughts with us - we’re always happy to hear your feedback. Use our short <a href="#">feedback form</a> to share your thoughts with us, and we’ll do our best to help you.</p>	
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="content footer">
+						<table>
+							<tr>
+								<td>
+									<h6>Why am I getting these emails?</h6>
+									<p>You're being sent this email because you're part of the X mailing list. There's always lots of exciting things going on with us in the Audience Engagement team and we want to make sure that you hear about it, however if you no longer want to receive emails from us, please reply to this email with <a href="#">unsubscribe</a> in the Subject field.</p>
+									<h5><a href="">Telescope</a> | <a href="#">Guides</a> | <a href="#">Contact</a></h5>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>
