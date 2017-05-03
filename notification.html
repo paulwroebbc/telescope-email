@@ -69,6 +69,8 @@
 		------------------------------------- */
 		.top-tip {
 			background-color: #f1f0f2;
+			border-top:none;
+			border-bottom:none;
 		}
 
 		.top-tip p {
@@ -78,6 +80,7 @@
 			letter-spacing: -0.2px;
 			text-align: left;
 			color: #404040;
+			margin-bottom:25px;
 		}
 
 		/* ------------------------------------- 
@@ -137,34 +140,34 @@
 		------------------------------------- */
 
 		h1 {
-			color:#404040;
-			line-height:36px;
+			color:#FFF;
+			line-height:22px;
 			overflow:hidden;
 			font-family: Helvetica;
-			font-size: 32px !important;
+			font-size: 18px !important;
 			padding:0 0 0 10px;
-			border-left:2px solid #ccc;
-			margin:0 0 0 48px;
+			border:none;
+			margin:0 0 0 22px;
 			font-weight: bold;
 			letter-spacing: -0.6px;
 			text-align: left;
 		}
 
 		h2 {
-			font-size: 32px;
-			font-weight: bold;
-			line-height: 36px;
-			letter-spacing: -0.6px;
-			color: #bb1919;
-			padding:18px 0 18px 0;
-		}
-
-		h3 {
 			font-size: 24px;
+			font-weight: bold;
 			line-height: 28px;
 			letter-spacing: -0.4px;
 			color: #404040;
-			padding:18px 0 18px 0;
+			padding:0 0 0 0;
+		}
+
+		h3 {
+			font-size: 18px;
+			line-height: 22px;
+			letter-spacing: -0.3px;
+			color: #404040;
+			padding:0 0 5px 0;
 		}
 
 		h4 {
@@ -201,10 +204,10 @@
 				LOGO 
 		------------------------------------- */
 		.logo {
-			background-image: url("../images/logo.jpg");
+			background-image: url("images/logo-white.png");
 			background-repeat: no-repeat;
 			background-position: top-left;
-			background-size: 36px 36px;
+			background-size: 22px 22px;
 		}
 
 		/* --------------------------------------------------- 
@@ -236,8 +239,8 @@
 			max-width:600px;
 			margin:0 auto;
 			display:block;
-			border:1px solid #ccc;
-			border-bottom:none;
+			border-left:1px solid #ccc;
+			border-right:1px solid #ccc;
 		}
 
 		/*
@@ -310,6 +313,12 @@
 			}
 
 		}
+		.red {
+			background-color:#bb1919;
+		}
+		.green {
+			background-color:#417505;
+		}
 		</style>
 
 	</head>
@@ -322,32 +331,22 @@
 				<td class="container">
 					
 					<!-- Logo -->
-					<div class="content">
+					<div class="content solid red">
 						<table>
 							<tr>
 								<td class="logo">
-									<h1>Telescope Newsletter</h1>	
+									<h1>Telescope Unplanned Downtime</h1>	
 								</td>
 							</tr>
 						</table>
 					</div>
 
-					<!-- Image -->
+					<!-- Title -->
 					<div class="content">
 						<table>
 							<tr>
 								<td>
-
-									<h2>Email Title</h2>
-
-									<img src="http://placehold.it/564x232" />
-
-									<h3>Section Heading</h3>				
-				
-									<p>Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Link Link Link, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text, Body text</p>
-				
-									<a href="#" class="btn">Link text goes here...</a>
-	
+									<h2>Comscore currently under-reporting</h2>	
 								</td>
 							</tr>
 						</table>
@@ -358,8 +357,32 @@
 						<table>
 							<tr>
 								<td>
-									<h4>Top Tip</h4>
-									<p>Latest top tips from users</p>	
+									<h3>Uh oh!</h3>
+									<p>Explain the issue in one to two short, simple sentances …
+									We are working hard to fix this and will keep you updated.</p>
+
+									<h3>Date &amp; time of event</h3>
+									<p>Monday 1st January 08:00</p>
+
+									<h3>Who or what does it affect?</h3>
+									<p>- Top Stories<br>- Video Statistics</p>
+
+									<h3>Any questions?</h3>
+									<p>If you have any questions or worries, please reply back to this email.</p>
+
+
+
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="content">
+						<table>
+							<tr>
+								<td>
+									<p>Many thanks,</p>
+									<p>The Telescoe Team<br>telescope@bbc.co.uk</p>
 								</td>
 							</tr>
 						</table>
